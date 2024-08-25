@@ -1,0 +1,114 @@
+<%- include("partials/header.ejs") %>
+
+<style>
+  body {
+      background: linear-gradient(45deg, #1a1a1a, #333333);
+      font-family: Arial, sans-serif;
+      color: #fff;
+      margin: 200px;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .register-container {
+      width: 400px;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      background: rgba(0, 0, 0, 0.5);
+  }
+
+  h1 {
+      text-align: center;
+      margin-bottom: 30px;
+  }
+
+  .form-floating label {
+      color: #ccc;
+  }
+
+  .form-control {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: none;
+      color: #fff;
+      margin-bottom: 20px;
+  }
+
+  .form-control:focus {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #fff;
+  }
+
+  .btn-dark {
+      background-color: #007bff;
+      border-color: #007bff;
+      transition: all 0.3s ease;
+  }
+
+  .btn-dark:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+  }
+
+  .text-body-secondary {
+      color: #bbb;
+      text-align: center;
+  }
+
+  @media (min-width: 576px) {
+      body {
+        margin-top: 200px;
+      }
+    }
+  
+    @media (max-width: 575.98px) {
+      body {
+        margin-top: 80px;
+      }
+    }
+</style>
+
+<div class="register-page">
+  <div class="register-container">
+      <h1 class="display-4 fw-bold">BassHarbour Ayurveda</h1>
+      <form action="/register" method="post">
+          <h2 class="h5 mb-4">Please register yourself</h2>
+
+          <div class="form-floating">
+              <input type="text" class="form-control" name="name" id="name" placeholder="name">
+              <label for="name">Your name</label>
+          </div>
+          <div class="form-floating">
+              <input type="text" class="form-control" name="referral_code" id="referralCode" placeholder="referral Code">
+              <label for="referralCode">Referral code</label>
+          </div>
+          
+          <div class="form-floating">
+              <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com">
+              <label for="email">Email address</label>
+          </div>
+          <div class="form-floating">
+              <input type="text" class="form-control" name="account_no" id="bankaccount_no" placeholder="account number">
+              <label for="bankaccount_no">Bank Account number</label>
+          </div>
+          <div class="form-floating">
+              <input type="text" class="form-control" name="ifsc_code" id="IFSCcode" placeholder="ifsc code">
+              <label for="IFSCcode">IFSC code</label>
+          </div>
+          <div class="form-floating">
+              <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+              <label for="password">Password</label>
+          </div>
+          <div class="form-floating">
+              <input type="text" class="form-control" name="contact_no" id="contactno" placeholder="contact no">
+              <label for="contactno">Mobile number</label>
+              <p class="mt-2 mb-2 text-white">Enter mobile which is linked to the bank account or linked to UPI</p>
+          </div> 
+          
+          <button class="btn btn-dark w-100 py-2" type="submit">Sign in</button>
+      </form>
+  </div>
+</div>

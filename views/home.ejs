@@ -1,0 +1,105 @@
+<%- include("partials/header.ejs") %>
+
+<style>
+    @media (min-width: 576px) {
+      .custom-img {
+        margin-top: 0;
+      }
+    }
+  
+    @media (max-width: 575.98px) {
+      .custom-img {
+        margin-top: 60px;
+        margin-left: 45px;
+      }
+    }
+</style>
+
+<section class="gradient-background">
+    <div class="container">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5" style="margin-right: 0px;">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img src="../images/Picsart_24-03-17_16-17-17-633.png" class="d-block mx-lg-auto img-fluid custom-img" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+          </div>
+          <div class="col-lg-6">
+            <h1 class="display-1 text-white lh-1 mb-3">MAKE YOUR HEALTH WITH...</h1>
+            <h3 class="display-5 fw-bold text-dark lh-1 mb-3" >BassHarbour Ayurveda</h3>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <p class="lead text-white">Get Excited offers for Ayurvedic products at a reasonable price.</p>
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+              <h1 class="display-1 fw-bold text-dark lh-1 mb-3" >₹390</h1>
+              </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+               <a href="/buy"> <button type="button" class="btn btn-dark btn-lg px-4 me-md-2">BUY your Pack</button></a>
+              </div>
+          </div>
+        </div>
+  </div>
+
+</section>
+
+  <div class="d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center">
+  <div class="list-group">
+    <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+      <div class="d-flex gap-2 w-100 justify-content-between">
+        <div>
+          <h6 class="mb-0">USER NAME : <% if(locals.username){ %>
+               <%= username %>
+         <% } %> </h6>
+         
+        </div>
+       
+      </div>
+    </a>
+    <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+      </svg>
+      <div class="d-flex gap-2 w-100 justify-content-between">
+        <div>
+          <h6 class="mb-0">USER ID : <% if(locals.userid){ %>
+               <%= userid %>
+         <% } %> </h6>
+          <p class="mb-0 opacity-75">your user id which is used for your referrals.</p>
+        </div>
+       
+      </div>
+    </a>
+    <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+        <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+      </svg>
+      <div class="d-flex gap-2 w-100 justify-content-between">
+        <div>
+          <h6 class="mb-0">Toatal Referrals : <% if(locals.totalrefferals){ %>
+            <%= totalrefferals %>
+      <% } %></h6>
+          <p class="mb-0 opacity-75">Total number of referrals you done till now.</p>
+        </div>
+      </div>
+    </a>
+    <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-check-fill" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M15.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+        <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+      </svg>
+      <div class="d-flex gap-2 w-100 justify-content-between">
+        <div>
+          <h6 class="mb-0">Paid referrals : <% if(locals.paidreferrals){ %>
+            <%= paidreferrals %>
+      <% } %> </h6>
+          <p class="mb-0 opacity-75">Total refferals that are paid to you.</p>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+<img class="img-fluid" src="../images/marketar.jpg" alt="img">
+   
+
+
+<%- include("partials/footer.ejs") %>

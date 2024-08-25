@@ -1,0 +1,39 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container" style="margin-top: 50px;">
+    <div > <!-- Center the content -->
+        <div class="col-lg-8"> <!-- Adjust column size -->
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div>
+                    <h1 class="display-3 fw-bold lh-1 mb-3">Payment with QR</h1>
+                    <p>NOTE : Scan the QR code with UPI apps Paytm, Phonepe, Google pay or your banking app </p>
+                    <p>Transaction ID : <%= Math.floor(Math.random()*10000000000000) %></p>
+                    <!-- Square container for the QR code image -->
+                    <div class="qr-container" style="margin-bottom: 30px;">
+                        <img src="../images/qr.jpg" alt="QR Code">
+                    </div>
+                    <p>Login to account when your payment is done, payment is refund to your account within in 3 days in case of any error and an email is sent to you when you succesfully buy the pack within 24 hrs.</p>
+                    <a href="/done"><button class="btn btn-warning fw-bold w-100 py-2" type="submit">Login back</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Square container for the QR code image */
+    .qr-container {
+        width: 200px; /* Adjust the size as needed */
+        height: 200px; /* Same as width to make it square */
+        border: 1px solid #000; /* Border for visualization */
+        overflow: hidden; /* Ensure the image does not overflow */
+    }
+
+    /* Make the image responsive within the container */
+    .qr-container img {
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
+        margin: auto;
+    }
+</style>
